@@ -5,31 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Winslow's Table</title>
 <style> 
-body{
-    body { margin: 0; }
-
-    h1, h2, h3, h6 {
-      border: 3px solid black;
-      padding: 14px;
-      margin: 16px auto;
-      width: 86%;
-      display: block;
-    }
-   p, article, table, ul, details {
-      border: 2px solid black;
-      padding: 16px;
-      margin: 16px auto;
-      width: 86%;
-      display: block;
-    }
+    body {
+      margin: 0;
+      background-color: hsl(79, 32%, 87%);
       font-family: Georgia, "Times New Roman", serif;
       font-size: 18px;
       line-height: 1.8;
       letter-spacing: 0.2px;
       text-align: left;
-      text-transform: none;
     }
 
+    body {
+    background-color: hsl(79, 32%, 87%);
+    margin: 0;
+    padding: 40px 0;
+    }
+
+    main {
+    max-width: 760px;
+    margin: 0 auto;
+    background: #fdfdfb;
+    padding: 36px 42px;
+    }
+
+    body > * {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    table { width: 60%; }
+    td {
+    padding: 6px;
+    border-bottom: 1px solid black;
+    }
+    
     h1{
       font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
       font-size: 35px;
@@ -101,14 +111,35 @@ body{
       text-align: left;
       font-style: normal;
     }
-
-    span{
-      font-style: italic;
-      font-size: 14px;
-      letter-spacing: 0.4px;
-      line-height: 1.6;
-      text-align: left;
+    h2 {
+    margin-top: 42px;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    position: relative;
+    padding-bottom: 10px;
     }
+
+    h2::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background: rgba(0,0,0,0.25);
+    margin-top: 10px;
+    }
+
+    h3 {
+    margin-top: 24px;
+    margin-bottom: 6px;
+    letter-spacing: 3px;
+    color: rgba(0,0,0,0.7);
+    }
+        span{
+        font-style: italic;
+        font-size: 14px;
+        letter-spacing: 0.4px;
+        line-height: 1.6;
+        text-align: left;
+        }
 
 </style>
 <h4>Winslow’s Table</h4>
@@ -167,11 +198,11 @@ body{
 <div>
 <h2> Breakfast </h2>
 <ul>
-    <li>Avocado Toast - $12</li>
+    <li>Avocado Toast - $12 </li>
     <li>Smoked Trout Bagel - $15</li>
     <li>Overnight Oats - $8</li>
     <li>Buttermilk Pancakes - $6 (for 1), $12 (for 2), or $14 (for 3)</li>
-    <li>Musroom Quiche - $15</li>
+    <li>Mushroom Quiche - $15</li>
     <li>Farmer's Breakfast - $15</li>
     <li>Shakshuka - $16</li>
     <li>Breakfast Biscuit Sandwich - $12</li>

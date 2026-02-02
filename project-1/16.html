@@ -5,31 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Winslow's Table</title>
 <style> 
-body{
-    body { margin: 0; }
-
-    h1, h2, h3, h6 {
-      border: 3px solid black;
-      padding: 14px;
-      margin: 16px auto;
-      width: 86%;
-      display: block;
-    }
-   p, article, table, ul, details {
-      border: 2px solid black;
-      padding: 16px;
-      margin: 16px auto;
-      width: 86%;
-      display: block;
-    }
+    body {
+      margin: 0;
+      background-color: hsl(79, 32%, 87%);
       font-family: Georgia, "Times New Roman", serif;
       font-size: 18px;
       line-height: 1.8;
       letter-spacing: 0.2px;
       text-align: left;
-      text-transform: none;
     }
 
+    h1, h2, h3, h6,
+    p, article, table, ul, details {
+      border: none;
+      width: 86%;
+      margin: 16px auto;
+      padding: 16px;
+      display: block;
+    }
+
+    p, article, table, ul, details {
+      background-color: #fdfdfb;
+      border-radius: 6px;
+    }
+      table { width: 60%; }
+        td {
+          padding: 6px;
+          border-bottom: 1px solid black;
+        }
+
+    ul { padding-left: 20px; }
+    li { margin: 6px 0; }
     h1{
       font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
       font-size: 35px;
@@ -167,11 +173,11 @@ body{
 <div>
 <h2> Breakfast </h2>
 <ul>
-    <li>Avocado Toast - $12</li>
+    <li>Avocado Toast - $12 </li>
     <li>Smoked Trout Bagel - $15</li>
     <li>Overnight Oats - $8</li>
     <li>Buttermilk Pancakes - $6 (for 1), $12 (for 2), or $14 (for 3)</li>
-    <li>Musroom Quiche - $15</li>
+    <li>Mushroom Quiche - $15</li>
     <li>Farmer's Breakfast - $15</li>
     <li>Shakshuka - $16</li>
     <li>Breakfast Biscuit Sandwich - $12</li>

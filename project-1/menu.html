@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winslow's Table</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" >
+
+<style> 
+
+:root{
+  --h-font: "Playfair Display", ui-serif, Georgia, serif;
+  --b-font: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  --bg: #e4dcc7;    
+  --paper: #f9f7f1;
+  --ink: #121213;
+  --ink-2:#2a2b2d;
+  --muted:#494d53;
+  --line:#c4ac87;
+
+  --gold:#c5a266;
+}
+
+*,
+*::before,
+*::after{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--b-font);
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: 0.2px;
+  padding: 40px 0; 
+}
+
+body > *{
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p, article, table, ul, details{
+  background: var(--paper);
+  border-radius: 8px;
+  padding: 14px 24px;
+  margin: 14px auto;
+  color: var(--ink-2);
+}
+
+h1, h2, h3{
+  font-family: var(--h-font);
+  color: var(--ink);
+  letter-spacing: 0.2px;
+  width: 85%;
+  margin: 16px auto;
+  padding: 0;
+}
+
+h1{
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h2{
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 42px;
+  margin-bottom: 10px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+h2::after{
+  content: "";
+  display: block;
+  height: 2px;
+  background: color-mix(in oklab, var(--gold) 70%, var(--line));
+  margin-top: 10px;
+}
+
+h3{
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--muted);
+  margin-top: 24px;
+  margin-bottom: 6px;
+}
+
+ul{
+  list-style: none;
+  padding-left: 0;
+  margin-top: 8px;
+}
+
+li{
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+li:last-child{ border-bottom: 0; }
+
+.price{
+  white-space: nowrap;
+  color: var(--ink-2);
+  font-weight: 600;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td{
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-2);
+}
+
+td:last-child{ text-align: right; }
+
+a{
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+a:hover{ text-decoration: underline; }
+
+.site-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto 24px auto;
+}
+
+.tagline{
+  font-family: var(--b-font);
+  color: var(--muted);
+  margin: 8px auto 0;
+  max-width: 60ch;
+}
+
+@media (max-width: 700px){
+  p, article, table, ul, details{
+    padding: 14px 18px;
+    width: 92%;
+  }
+  h1, h2, h3{ width: 92%; }
+  li{ flex-direction: column; align-items: flex-start; }
+  .price{ white-space: normal; }
+  td:last-child{ text-align: left; }
+}
+
+/* ===== Fix menu box padding + heading underline alignment ===== */
+
+/* 1) Force ALL content blocks to share the exact same width */
+h2,
+p,
+article,
+ul,
+table {
+  width: min(760px, 92%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 2) Make the h2 underline match the same width (and not “float”) */
+h2 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+h2::after {
+  width: 100%;
+}
+
+/* 3) Put padding INSIDE the menu boxes (this is the main issue in your screenshot) */
+ul,
+table {
+  background: var(--paper, #fffdf8);
+  border-radius: 10px;
+  overflow: hidden; 
+}
+
+ul {
+  padding: 10px 18px;
+}
+
+ul li {
+  padding: 12px 6px;          
+  border-bottom: 1px solid var(--line, #e8e1d6);
+}
+
+table {
+  padding: 0;                  
+}
+
+td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--line, #e8e1d6);
+}
+
+tr:last-child td,
+ul li:last-child {
+  border-bottom: 0;
+}
+
+td:last-child {
+  text-align: right;
+}
+
+
+</style>
+
+
+</head>
+<body>
+
+ <header class="site-header">
+  <img src="images/winslows-logo-2.png" alt="Winslow’s Table logo" class="logo">
+  <p class="tagline">
+    Coffee, breakfast, lunch &amp; dinner—plus local gifts and a patio in University City.
+  </p>
+</header>
+
+<h2>Who are we? </h2>
+<p>We are known for our cozy, farm-to-table comfort food, scratch-made pastries, and coffee, serving generations with brunch, breakfast, lunch, and dinner in University City. We focus on fresh, seasonal ingredients from local farms to create comforting dishes like quiche, pot pies, and house-made baked goods, offering a warm, casual experience with both dine-in and takeaway options, plus a market for local goods.
+</p>
+
+<h2>Why Us? </h2>
+<article>We <b>stand out</b> for our commitment to farm-fresh, seasonal ingredients, creating modern American comfort food in a charming, historic building that feels like a neighborhood escape, combining a casual restaurant, bakery, and market with housemade goods and local provisions for a truly local, community-focused experience.
+</article>
+
+<h2> Hours </h2>
+<table>
+  <tr>
+  </tr>
+  <tr>
+    <td>Monday</td>
+    <td> <i>(Closed)</i> </td>
+  </tr>
+  <tr>
+    <td>Tuesday</td>
+    <td> <i>(Closed)</i> </td>
+  </tr>
+  <tr>
+    <td>Wednesday</td>
+    <td>(8 AM - 7 PM)</td>
+  </tr>
+  <tr>
+    <td>Thursday</td>
+    <td>(8 AM - 7 PM)</td>
+
+  </tr>
+  <tr>
+    <td>Friday</td>
+    <td>(8 AM - 7 PM)</td>
+
+  </tr>
+  <tr>
+    <td>Saturday</td>
+    <td>(8 AM - 7 PM)</td>
+
+  </tr>
+  <tr>
+    <td>Sunday</td>
+    <td>(8 AM - 7 PM)</td>
+  </tr>
+</table>
+
+<div>
+<h2> Breakfast </h2>
+<ul>
+    <li><span class="item">Avocado Toast</span><span class="price">$12</span></li>
+    <li><span class="item">Smoked Trout Bagel</span><span class="price">$15</span></li>
+    <li><span class="item">Overnight Oats</span><span class="price">$8</span></li>
+    <li><span class="item">Buttermilk Pancakes</span><span class="price">$6 (for 1) | $12 (for 2) | or $14 (for 3)</span></li>
+    <li><span class="item">Mushroom Quiche</span><span class="price">$15</span></li>
+    <li><span class="item">Farmer's Breakfast</span><span class="price">$15</span></li>
+    <li><span class="item">Shakshuka</span><span class="price">$16</span></li>
+    <li><span class="item">Breakfast Biscuit Sandwich</span><span class="price">$12</span></li>
+    <li><span class="item">Breakfast Burrito</span><span class="price">$16</span></li>
+    <li><span class="item">The Classic Sandwich</span><span class="price">$8</span></li>
+    <li><span class="item">Unami Omelette</span><span class="price">$16</span></li>
+</ul>
+</div>
+
+<h2> Lunch </h2>
+<ul>
+    <li><span class="item">Grilled Cheese</span><span class="price">$12.5</span></li>
+    <li><span class="item">Mediterranean Wrap</span><span class="price">$16.5</span></li>
+    <li><span class="item">Blackened Chicken Sandwich</span><span class="price">$16.5</span></li>
+        <li><span class="item">Half & Half (Select Any Two)</span><span class="price">$16</span></li>
+           <li> ...........Tomato Soup</li>
+            <li> ...........Half Italian Salad</li>
+            <li> ...........Half Grain Salad</li>
+            <li> ...........Half Beet and Citrus Salad</li>
+            <li> ...........Half Smoked Trout Bagel</li>
+            <li> ...........Half Turkey Sandwich</li>
+</ul>
+
+<h2> Drinks </h2>
+
+<h3> Coffee </h3>
+<ul>
+        <li><span class="item">Sump True Level (Mexico) Drip</span><span class="price">$5</span></li>
+        <li><span class="item">Cold Brew</span><span class="price">$6.5</span></li>
+        <li><span class="item">Honey Oat Cold Brew</span><span class="price">$7</span></li>
+</ul>
+<h3> Espresso </h3>
+<ul>
+    <li><span class="item">Melting Darnkess (MX) Double Espresso</span><span class="price">$3</span></li>
+    <li><span class="item">Americano (Reg or Decaf)</span><span class="price">$4.5</span></li>
+</ul>
+
+<h3> Espresso + Milk </h3>
+<ul>
+        <li><span class="item">Cortado</span><span class="price">$3.75</span></li>
+        <li><span class="item">Cappuccino</span><span class="price">$4.5</span></li>
+        <li><span class="item">Latte</span><span class="price">$5.5 | $7</span></li>
+        <li><span class="item">Iced Latte</span><span class="price">$7</span></li>
+</ul>
+<h3> Barista Specials </h3>
+<ul>
+            <li><span class="item">Chai Latte</span><span class="price">$5.5 | $6.5</span></li>
+            <li><span class="item">Matcha Latte</span><span class="price">$5.5 | $7</span></li>
+            <li><span class="item">Vanilla Steamer</span><span class="price">$4.5</span></li>
+            <li><span class="item">Hot Chocolate</span><span class="price">$5</span></li>
+</ul>
+
+<h3> Tea </h3>
+<ul>
+            <li><span class="item">Iced Black Tea</span><span class="price">$5</span></li>
+            <li><span class="item">Iced Hibiscus Rose Herbal</span><span class="price">$5.5</span></li>
+            <li><span class="item">Big Heart Hot Teas</span><span class="price">$5</span></li>
+</ul>
+
+<h3> Sodas, Juice & More </h3>
+<ul>
+            <li><span class="item">Lemonade</span><span class="price">$6 | $6.5</span></li>
+            <li><span class="item">Orange Juice</span><span class="price">$3.5 | $6</span></li>
+            <li><span class="item">Rolling Lawns Milk</span><span class="price">$3 | $4</span></li>
+</ul>
+
+<h3> Boozy Beverages </h3>
+<ul>
+                <li><span class="item">Mimosa</span><span class="price">$10</span></li>
+            <li><span class="item">Build-Your-Own-Mimosa <i> Serves 4</i></span><span class="price">$35</span></li>
+            <li><span class="item">WT G&T</span><span class="price">$11</span></li>
+                        <li><span class="item">Bloody Mary</span><span class="price">$12</span></li>
+</ul>
+
+<h3> House Wines </h3>
+<ul>
+                <li><span class="item">By The Glass</span><span class="price">$9 (6 oz)</span></li>
+            <li><span class="item">Wine Carafes</span><span class="price">$22 (16 oz)</span></li>
+</ul>
+
+<h3> Contact </h3>
+<ul>
+    <li>Phone Number: <a href="(314) 725-7559">(314) 725-7559</a></li>
+    <li>Instagram: @winslowstable</li>
+    <li> Website: <a href="winslowstable.com"> winslowstable.com </a></li>
+</ul>
+</body>
+</html>

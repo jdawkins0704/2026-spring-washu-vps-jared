@@ -168,9 +168,7 @@ a:hover{ text-decoration: underline; }
   td:last-child{ text-align: left; }
 }
 
-/* ===== Fix menu box padding + heading underline alignment ===== */
 
-/* 1) Force ALL content blocks to share the exact same width */
 h2,
 p,
 article,
@@ -181,7 +179,6 @@ table {
   margin-right: auto;
 }
 
-/* 2) Make the h2 underline match the same width (and not “float”) */
 h2 {
   padding-left: 0;
   padding-right: 0;
@@ -191,7 +188,6 @@ h2::after {
   width: 100%;
 }
 
-/* 3) Put padding INSIDE the menu boxes (this is the main issue in your screenshot) */
 ul,
 table {
   background: var(--paper, #fffdf8);
@@ -281,7 +277,7 @@ td:last-child {
   </tr>
   <tr>
     <td>Sunday</td>
-    <td>(8 AM - 7 PM)</td>
+    <td>(8 AM - 3 PM)</td>
   </tr>
 </table>
 

@@ -391,3 +391,9 @@ a{ color: inherit; }
   color: rgba(0,0,0,0.55);
   font-size: 18px;
 }
+
+.topbar__nav{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}

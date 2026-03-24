@@ -51,7 +51,6 @@ a{
   background: rgba(0,0,0,.05);
 }
 
-/* home hero */
 
 .archiveHero{
   text-align: center;
@@ -144,7 +143,6 @@ display:block;
   font-weight: 500;
 }
 
-/* prompt */
 
 .archivePrompt{
   text-align: center;
@@ -169,7 +167,6 @@ display:block;
   font-size: 18px;
 }
 
-/* feature panel */
 
 .featurePanel{
   padding: 28px 26px 42px;
@@ -233,7 +230,6 @@ display:block;
   font-size: 18px;
 }
 
-/* topbar for inner pages */
 
 .archiveTopbar{
   border-bottom: 1px solid var(--archive-border);
@@ -268,7 +264,6 @@ display:block;
   color: var(--archive-text);
 }
 
-/* section page */
 
 .sectionPage{
   width: min(980px, calc(100% - 36px));
@@ -391,7 +386,6 @@ display:block;
   color: var(--archive-muted);
 }
 
-/* map page */
 
 .mapPage{
   width: min(1100px, calc(100% - 36px));

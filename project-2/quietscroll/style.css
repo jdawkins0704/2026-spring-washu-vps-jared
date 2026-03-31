@@ -397,3 +397,38 @@ a{ color: inherit; }
   gap: 12px;
   flex-wrap: wrap;
 }
+
+.gallery__instruction{
+  text-align: center;
+  color: var(--muted);
+  font-style: italic;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.frame__label{
+  margin-top: 8px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: .05em;
+  text-transform: lowercase;
+}
+
+.frame__link{
+  display: block;
+  text-decoration: none;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.frame__link:hover{
+  transform: translateY(-4px);
+}
+
+.frame:hover{
+  box-shadow: 0 14px 30px rgba(0,0,0,.14);
+}
+
+.frame__link img{
+  cursor: pointer;
+}
